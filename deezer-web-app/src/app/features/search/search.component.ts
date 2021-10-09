@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild, AfterContentInit, forwardRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ContentChild, AfterContentInit, forwardRef, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 import {ControlValueAccessor, FormControl, NgModel, NG_VALUE_ACCESSOR, DefaultValueAccessor} from '@angular/forms';
 import {trigger, state, transition, animate, style, query, animateChild, group} from '@angular/animations';
 import {MatAutocomplete} from '@angular/material/autocomplete';
@@ -91,7 +91,8 @@ export class SearchComponent implements ControlValueAccessor, OnInit {
 
   @ViewChild(DefaultValueAccessor)
   inputModel: DefaultValueAccessor | any;
-
+  @Input() search = '';
+  @Output() searchActive = new EventEmitter<string>();
   _value:any = '';
   _onChangesFn : ((any: any) => null) | undefined ;
   filteredOptions:any = []
@@ -130,7 +131,7 @@ export class SearchComponent implements ControlValueAccessor, OnInit {
 
   Searching(e:any){
     this.artistSearched = e.target.value;
-
+    this.searchActive.emit(this.artistSearched);
   }
   close() {
     this._value = '';

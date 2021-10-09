@@ -1,0 +1,6 @@
+<div *ngFor ="let artist of artistInGenre">
+    <img src="{{artist.picture}}" (click) = "artistNameimage(artist)"/>
+    <div class="inner-frames">
+        <h2>{{artist.name}}</h2>
+    </div>
+</div>

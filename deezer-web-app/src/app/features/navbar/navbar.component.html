@@ -6,7 +6,7 @@
   <div class="search">
     <mat-toolbar class="mat-typography">
       <div fxFlex></div>
-      <app-search (ngModel)="hi">
+      <app-search (ngModel)="hi" ([search])="artistSearched" (searchActive)="OnSearch($event)">
         <mat-autocomplete>
           <mat-option *ngFor="let option of options" [value]="option">
             {{option}}

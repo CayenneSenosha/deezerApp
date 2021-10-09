@@ -37,4 +37,16 @@ export class DeezerApiService {
     let url = `${this.apiUrl}/artist/${id}`;
     return  this.http.get(url);
   }
+  getArtistByGenre(id:string){
+    let url = `${this.apiUrl}/genre/${id}/artists`;
+    return this.http.get(url);
+  }
+  getAlbumTracks(id:string){
+    let url = `${this.apiUrl}/album/${id}/tracks`;
+    return this.http.get(url);
+  }
+  getAlbum(id:string){
+    let url = `${this.apiUrl}/album/${id}`;
+    return this.http.get(url);
+  }
 }

@@ -22,7 +22,7 @@
 
         <h2>Albums</h2>
         <div class="albums" *ngFor="let album of albums.data ;let count=index">
-            <div class="album-cover">
+            <div class="album-cover" (click)="albumView(album)">
                 <img class="cover" src="{{album.cover}}" alt="">
                 <h3>{{album.title}}</h3>
                 <p>{{album.release_date}}</p>

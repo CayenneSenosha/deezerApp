@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DeezerApiService } from 'src/app/services/deezer-api.service';
 
 @Component({
@@ -13,8 +14,14 @@ export class ArtistAlbumComponent implements OnInit {
   artist:any = null;
   isLoading:boolean = false;
   error:any = null;
-  constructor(private deezerApiService: DeezerApiService) { }
+  constructor(private deezerApiService: DeezerApiService,private router: Router) { }
 id :string = "";
+
+albumView(album:any):void{
+  console.log(album);
+  let c = `album-tracks/${album.id}`;
+  this.router.navigateByUrl(c);
+}
   ngOnInit(): void {
     let url =  window.location.href;
     var id = url.substring(url.lastIndexOf('/') + 1);

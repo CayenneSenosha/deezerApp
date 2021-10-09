@@ -17,6 +17,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HttpClientModule } from '@angular/common/http';
+import { ArtistGenreComponent } from './features/artist-genre/artist-genre.component';
+import { AlbumTracksComponent } from './features/album-tracks/album-tracks.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     ArtistsComponent,
     ArtistAlbumComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistGenreComponent,
+    AlbumTracksComponent
   ],
   imports: [
     BrowserModule,

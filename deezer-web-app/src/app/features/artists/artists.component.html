@@ -6,7 +6,7 @@
     <div *ngIf="!isLoading">
     <div *ngIf="!artistDataPopulated">
      <div class="frames" *ngFor ="let genre of genres.data">
-            <img src="{{genre.picture}}" (click) ="imageClicked(genre.name)"/>
+            <img src="{{genre.picture}}" (click) ="imageClicked(genre)"/>
         <div class="inner-frames">
             <h2>{{genre.name}}</h2>
         </div>

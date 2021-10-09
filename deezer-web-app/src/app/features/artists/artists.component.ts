@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IArtist, IArtistContent, IgetAllGenre } from 'src/app/interfaces/Interface';
+import { IArtist, IArtistContent, IGenre, IgetAllGenre } from 'src/app/interfaces/Interface';
 import { ArtistService } from 'src/app/services/artist.service';
 import { DeezerApiService } from 'src/app/services/deezer-api.service';
 
@@ -31,11 +31,11 @@ export class ArtistsComponent implements OnInit {
     })
    this.artistDataPopulated = false
   }
-  imageClicked(name:string){
-    //this.router.navigateByUrl("/artist-album");
-    console.log("searched data =  for " + name, this.artistService.getArtistData())
-    this.artist = this.artistService.getArtistData();
-    this.artistDataPopulated = true;
+  imageClicked(genreData:IGenre){
+    this.router.navigateByUrl("/artist-genre/"+genreData.id);
+   // console.log("searched data =  for " + name, this.artistService.getArtistData())
+    //this.artist = this.artistService.getArtistData();
+    //this.artistDataPopulated = true;
   }
 
   artistNameimage(data:IArtistContent){
