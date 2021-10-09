@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="logo" (click) ="homeIcon()">
+      <img src="../../../assets/icons/Music-Icon.jpeg" alt="" href="/home"/>
+  </div>
+  <h1>Deezer Web App</h1>
+  <div class="search">
+    <mat-toolbar class="mat-typography">
+      <div fxFlex></div>
+      <app-search (ngModel)="hi">
+        <mat-autocomplete>
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </app-search>
+    </mat-toolbar>
+  </div>
+</div>

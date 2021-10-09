@@ -1,0 +1,82 @@
+.album-cover {
+    height: 200px; 
+    width: 200px;
+    display: inline-grid;
+    margin-left: 50px;
+    margin-bottom: 80px;
+
+}
+.spinner{
+    justify-content: center;
+    align-self: center;
+    color: #054257;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.album-cover h3{
+    margin: 0px;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+}
+
+.albums {
+    display: inline-grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 100px;
+    grid-gap: 50px;
+} 
+
+h2 {
+    margin-left: 150px;
+    margin-top: 50px;
+
+}
+
+.playlist {
+    width: 68%;
+    height: 300px;
+    padding: 2px;
+    margin-top: 30px;
+    margin-left: 235px;
+    background-color: white;
+}
+
+.album-image {
+    height: 100%;
+    width: 60%;
+}
+
+.tracklist {
+    float: right;
+    height: 100%;
+    width: 40%;
+    margin-top: -22.3%;
+}
+
+.artist-details {
+    z-index: -1;
+    margin-top: -35%;
+    margin-left: 0;
+    text-align: left;
+} 
+
+#fans {
+    margin-top: -5px;
+    font-size: 100%;
+    color: white;
+
+}
+
+#artist {
+    font-size: 150%;
+    color: white;
+}
+
+.h3 {
+    color: white;
+}

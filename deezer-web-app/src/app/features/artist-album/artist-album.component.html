@@ -1,0 +1,34 @@
+
+    <div class="spinner" *ngIf="isLoading">
+        <mat-spinner></mat-spinner>
+    </div>
+
+<div *ngIf="topTracks && albums && artist && !isLoading">
+    <div class="playlist">
+        <div class="album-image">
+            <img src="{{artist.picture}}" width="100%" height="100%">
+            <div class="artist-details">
+                <strong id="artist">{{artist.name}}</strong>
+                <p id="fans">{{artist.nb_fan}}K Fans</p>
+            </div>
+        </div>
+
+        <div class="tracklist">
+            <h1>Top Tracks List</h1>
+            <div *ngFor="let track of topTracks.data ;let count=index">
+                <span>{{count+1}}.{{track.title}}</span>
+            </div>
+        </div>
+
+        <h2>Albums</h2>
+        <div class="albums" *ngFor="let album of albums.data ;let count=index">
+            <div class="album-cover">
+                <img class="cover" src="{{album.cover}}" alt="">
+                <h3>{{album.title}}</h3>
+                <p>{{album.release_date}}</p>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

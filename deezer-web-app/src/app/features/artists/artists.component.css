@@ -1,0 +1,64 @@
+.frames {
+    width: 350px;
+    height: 350px;
+    display: inline-block;
+    padding: 50px;
+    margin-top: -5px;
+}
+
+.frames img{
+    height: 100%;
+    width: 100%;
+}
+
+.frames-container {
+   height: 100%;
+   width: 100%;
+   padding: 50px;
+   padding-left: -1000px;
+   padding-right: 300px;
+}
+
+h2 {
+    color:white;
+}
+.spinner{
+    justify-content: center;
+    align-self: center;
+    color: #054257;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner mat-spinner{
+    color: #054257;
+}
+
+p{
+    color:white;
+    margin-top: -5;
+}
+
+.inner-frames {
+    background-color:#054257;
+    width: auto;
+    height: 80px;
+    margin-top: -5px;
+}
+
+p {
+    color:white;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+    .frames {
+      margin-top: 20px;
+    }
+    .frames-container{
+        padding:30px;
+        padding-left: 8px;;
+    }
+  }

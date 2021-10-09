@@ -1,0 +1,25 @@
+<div  class="frames-container">
+    <div class="spinner" *ngIf="isLoading">
+        <mat-spinner class="mat-spinner"></mat-spinner>
+    </div>
+
+    <div *ngIf="!isLoading">
+    <div *ngIf="!artistDataPopulated">
+     <div class="frames" *ngFor ="let genre of genres.data">
+            <img src="{{genre.picture}}" (click) ="imageClicked(genre.name)"/>
+        <div class="inner-frames">
+            <h2>{{genre.name}}</h2>
+        </div>
+    </div>
+</div>
+    <div *ngIf="artistDataPopulated" >
+       <div *ngFor ="let dataArtist of artist.data" class="frames">         
+            <img src="{{dataArtist.artist.picture}}" (click) = "artistNameimage(dataArtist)" />
+            <div class="inner-frames">
+                <h2>{{dataArtist.artist.name}}</h2>
+                <p>{{dataArtist.rank}}K fans</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
